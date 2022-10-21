@@ -61,6 +61,9 @@ header ul {
     flex-direction: column;
     gap: 20px;
 }
+header i {
+    color: white;
+}
 .logo {
     height: auto;
     width: 150px;
@@ -75,7 +78,8 @@ header ul {
 .bottom_tab {
    position: fixed;
    bottom: 200px;
-   z-index: 10;
+   z-index: 11;
+   background-color: black;
 }
 .bottom_tab hr {
     width: 150px;
@@ -121,22 +125,35 @@ a:hover {
 .selected_song {
     height: 50px;
     width: 100px;
+    margin-left: 20px;
 }
 .controls {
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 .progression {
-    width: 10vw;
     font-weight: 400;
 }
-
-
-
-
-
-
+.videop {
+    margin-top: 20px;
+    width: calc(20px + 32vw);
+}
+.sound {
+    width: calc(20px + 5vw);
+}
+.icon_big {
+    font-size: 40px;
+}
+.time {
+    font-size: 12px;
+}
+/* Hover //////////////*/
+i:hover {
+    color: white;
+}
 
 
 
@@ -147,17 +164,31 @@ a:hover {
 
 /*////////////// Responsive //////////////*/
 
-@media only screen and (max-width: 878px) {
+@media only screen and (max-width: 950px) {
     /* ///// Header ///// */
     header {
         width: 250px;
     }
+    /* ///// Main ///// */
     main {
         width: calc(100vw - 250px);
     }
+    /* ///// Footer ///// */
+    .controls {
+        gap: 20px;
+    }
+    .short {
+        width: 150px;
+    }
+    .selected_song {
+        height: 50px;
+        width: 120px;
+        margin-left: 20px;
+    }
+
 }
 
-@media only screen and (max-width: 552px) {
+@media only screen and (max-width: 600px) {
     /* ///// Header ///// */
     .no_phone  {
         display: none;
@@ -168,6 +199,7 @@ a:hover {
     .logo {
         width: 50px;
     }
+    /* ///// Main ///// */
     header {
         width: 100px;
         padding: 15px 25px;
@@ -175,8 +207,19 @@ a:hover {
     .header ul {
         gap: 10px;
     }
+
     main {
         width: calc(100vw - 100px);
     }
-        
+    /* ///// Footer ///// */
+    .controls {
+        gap: 10px;
+    }
+    .control_bar img {
+        width: 35px;
+        height: 35px;
+    }
+    .controls_left {
+        flex-direction: column;
+    }
 }
